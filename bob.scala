@@ -1,22 +1,29 @@
+
+
 object Bob {
   def main(args: Array[String]) {
+    
     def hey(statement: String) {
-      if (statement == null) {
-        println("Fine. Be that way!")
-      }
-
-      val punctuation = statement.charAt(statement.length() - 1)
-      
-      if (punctuation == '?') {
-        println("Sure.")
-      } else if (punctuation == '!') {
-        println("Woah, chill out!")
-      } else {
-        println("Whatever.")
-      }
+      val punctuation = get_punctuation(statement)
+      println(respond(punctuation))
     }
 
+    def get_punctuation(statement: String):Char = {
+      return statement.charAt(statement.length() - 1)
+    }
+
+    def respond(punctuation: Char) = punctuation match {
+      case '?' => "Sure."
+      case '!' => "Woah, chill out!"
+      case  _ => "Whatever."
+    }
+    
     val statement = args.mkString(" ")
-    hey(statement)
+
+    if (statement.isEmpty) 
+      println("Fine. Be that way!")
+    else 
+      hey(statement)
   }
 }
+
