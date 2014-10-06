@@ -1,4 +1,12 @@
-# Bob
+## My First Scala Program
+
+This is my very first scala program. It's a very simple implementation of the exercise below from [exercism.io](http://exercism.io)
+
+
+
+
+
+## Bob
 
 Bob is a lackadaisical teenager. In conversation, his responses are very limited.
 
